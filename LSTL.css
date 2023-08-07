@@ -1,0 +1,132 @@
+:root{
+    --color1:#ffffff;
+    --color2:#555555;
+    --color3:#55555560;
+    --color4:#08202b;
+    --color5:#ff6c45;
+    --color6:#014874;
+    --color7:#333E48;
+    --color8:#9fbac6;
+}
+*{
+margin: 0;
+padding: 0;
+}
+
+body{
+    font-family: monospace;
+    font-size: 3rem;
+    color: var(--color8);
+}
+h2{
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--color6);
+}
+p{
+    font-size: 1rem;
+    text-align: center;
+    color: var(--color6);
+}
+.parallax_wrapper {
+    height: 75vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 300px;      
+}
+.intro{
+    height: 100vh;
+    background-color: var(--color5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.outro{
+    height: 100vh;
+    background-color: var(--color6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.group{
+    position: relative;
+    height: 75vh;
+    transform-style: preserve-3d;
+}
+.transition{
+    height: 75vh;
+    background-color:darkgoldenrod;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.layer{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.base_layer{
+    /*scale calculation: 1+((Z transform value * -1)/ perspective)*/
+    transform: translateZ(-300px) scale(2);
+}
+.mid_layer{
+    /*scale calculation: 1+((Z transform value * -1)/ perspective)*/
+    transform: translateZ(0px);
+    display: flex;
+    flex-direction: column;
+}
+.top_layer{
+    transform: translateZ(210px) scale(0.3);
+}
+.transition2{
+    height: 75vh;
+    background-color:var(--color1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo3d{
+    width: 110%;
+}
+
+#intro{
+    z-index: 0;
+}
+#group-1{
+    z-index: -1;
+}
+#group-1 > .base_layer {
+    background-image: url("Banniere2.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 75vh;
+    height: 75svh;
+    opacity: .75;    
+}
+
+#trans{
+    z-index: 0;
+}
+#group-2{
+    z-index:-2;
+}
+#group-2 > .base_layer{
+    background-color: yellowgreen;
+    background-image: url("Banniere3.jpg"); /* Ajoutez votre image ici */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 75vh;
+    height: 75svh;
+    opacity: .75;
+}
+#outro{
+    z-index: -3;
+}

@@ -100,7 +100,7 @@ p{
     z-index: -1;
 }
 #group-1 > .base_layer {
-    background-image: url("Banniere2.jpg");
+    background-image: url("images/Banniere2.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -118,7 +118,7 @@ p{
 }
 #group-2 > .base_layer{
     background-color: yellowgreen;
-    background-image: url("Banniere3.jpg"); /* Ajoutez votre image ici */
+    background-image: url("images/Banniere3.jpg"); /* Ajoutez votre image ici */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
